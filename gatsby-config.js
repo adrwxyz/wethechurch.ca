@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Westegg Gatsby Theme Core Starter`,
-    description: `A slim, trim, MDX powered, Gatsby starter with CI and automatic updates`,
-    siteUrl: "https://adrw.xyz",
+    title: `We The Church`,
+    description: `A house church in Kitchener-Waterloo`,
+    siteUrl: "https://wethechurch.ca",
     author: `@adrw`
   },
   plugins: [
@@ -14,6 +14,14 @@ module.exports = {
           default: require.resolve("./src/components/layout.js")
         },
         mdxShowToc: false
+      }
+    },
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "2",
+        matomoUrl: "https://matomo.adrw.xyz",
+        siteUrl: "https://wethechurch.ca"
       }
     }
   ]
